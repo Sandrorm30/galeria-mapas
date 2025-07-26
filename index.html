@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+
+    <!-- Favicons Gerados pelo RealFaviconGenerator -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="theme-color" content="#667eea">
+
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Galeria">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- resto do HTML permanece igual -->
+
+<body>
+    <!-- CONTROLES QUE SE ESCONDEM AUTOMATICAMENTE APENAS NO DESKTOP -->
+    <div class="controls-overlay" id="controls-overlay">
+        <div class="controls-container">
+            <!-- DESKTOP: Botões + Dropdown Horizontal -->
+            <div class="desktop-controls">
+                <button id="btn-portrait" onclick="changeOrientation('portrait')"
+                    class="orientation-btn active">📱</button>
+
+                <div class="dropdown-wrapper">
+                    <div class="dropdown-toggle" onclick="toggleDropdown()">
+                        <span id="selected-text">Selecione uma foto</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <!-- Opções carregadas dinamicamente -->
+                    </div>
+                </div>
+
+                <button id="btn-landscape" onclick="changeOrientation('landscape')" class="orientation-btn">🖥️</button>
+            </div>
+
+            <!-- MOBILE: Apenas Dropdown - SEMPRE VISÍVEL -->
+            <div class="mobile-controls">
+                <div class="dropdown-wrapper">
+                    <div class="dropdown-toggle" onclick="toggleDropdown()">
+                        <span id="selected-text-mobile">Selecione uma foto</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu-mobile">
+                        <!-- Opções carregadas dinamicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ÁREA DA IMAGEM OCUPANDO TELA INTEIRA -->
+    <div class="image-area" id="image-area">
+        <img id="main-image" class="main-image" style="display: none;">
+
+        <div class="loading-overlay" id="loading">
+            <div class="spinner"></div>
+            <div>Carregando...</div>
+        </div>
+    </div>
+
+    <div class="error-message" id="error-message"></div>
+
+    <script src="script.js"></script>
+    <script src="pwa.js"></script>
+</body>
+
+</html>
