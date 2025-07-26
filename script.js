@@ -612,6 +612,119 @@ function reloadData() {
     loadPhotosFromSheets();
 }
 
+// DEBUG - Forçar criação do botão de instalação
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        console.log('🔍 Criando botão de instalação forçadamente...');
+        
+        // Detectar se estamos na página de login
+        const loginBox = document.querySelector('.login-box');
+        if (loginBox && !document.getElementById('debug-install-btn')) {
+            
+            const installBtn = document.createElement('button');
+            installBtn.id = 'debug-install-btn';
+            installBtn.innerHTML = '📱 Instalar App (Debug)';
+            installBtn.style.cssText = `
+                width: 100%;
+                background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+                border: none;
+                border-radius: 12px;
+                padding: 12px 20px;
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 15px;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            `;
+            
+            installBtn.addEventListener('click', () => {
+                alert('Botão funcionando! Agora vou mostrar as instruções de instalação.');
+                showInstallInstructions();
+            });
+            
+            loginBox.appendChild(installBtn);
+            console.log('✅ Botão debug criado com sucesso');
+        }
+        
+        // Para a galeria
+        const controlsOverlay = document.getElementById('controls-overlay');
+        if (controlsOverlay && !document.getElementById('debug-install-btn-gallery')) {
+            
+            const installBtn = document.createElement('button');
+            installBtn.id = 'debug-install-btn-gallery';
+            installBtn.innerHTML = '📱';
+            installBtn.title = 'Instalar App (Debug)';
+            installBtn.style.cssText = `
+                position: absolute;
+                top: 70px;
+                left: 15px;
+                background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+                border: none;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                color: white;
+                cursor: pointer;
+                font-size: 18px;
+                z-index: 3100;
+                box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            `;
+            
+            installBtn.addEventListener('click', () => {
+                showInstallInstructions();
+            });
+            
+            controlsOverlay.appendChild(installBtn);
+            console.log('✅ Botão debug galeria criado');
+        }
+        
+    }, 2000);
+});
+
+// Função para mostrar instruções de instalação
+function showInstallInstructions() {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+    
+    let instructions = '';
+    
+    if (isIOS) {
+        instructions = `📱 INSTALAR NO iOS (Safari):
+        
+1. Toque no botão COMPARTILHAR (⬆️) na parte inferior
+2. Role para baixo e encontre "Adicionar à Tela Inicial"
+3. Toque em "Adicionar à Tela Inicial"
+4. Toque em "Adicionar" para confirmar
+
+O app aparecerá na sua tela inicial!`;
+    } else if (isAndroid) {
+        instructions = `📱 INSTALAR NO ANDROID (Chrome):
+        
+1. Toque no MENU (⋮) no canto superior direito
+2. Procure por "Adicionar à tela inicial" ou "Instalar app"
+3. Toque nesta opção
+4. Toque em "Adicionar" para confirmar
+
+O app aparecerá na sua tela inicial!`;
+    } else {
+        instructions = `💻 INSTALAR NO DESKTOP:
+        
+CHROME/EDGE:
+1. Olhe na barra de endereços por um ícone de instalação (⊕)
+2. OU clique no Menu (⋮) → "Instalar Galeria de Fotos"
+3. Clique em "Instalar"
+
+FIREFOX:
+1. Menu (☰) → "Instalar este site como app"
+2. Clique em "Instalar"`;
+    }
+    
+    alert(instructions);
+}
+
+
 window.reloadGallery = reloadData;
 
 console.log('📸 Galeria de Fotos - Script carregado');
