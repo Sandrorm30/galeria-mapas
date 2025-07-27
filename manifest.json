@@ -1,7 +1,7 @@
 {
-  "name": "Galeria de Fotos Privada",
+  "name": "Galeria de Mapas Privada",
   "short_name": "Galeria",
-  "description": "Galeria de fotos protegida com acesso restrito",
+  "description": "Galeria de mapas protegida com acesso restrito",
   "start_url": "/login.html",
   "display": "standalone",
   "background_color": "#667eea",
@@ -12,13 +12,13 @@
   "categories": ["photo", "productivity"],
   "icons": [
     {
-      "src": "/icons/android-chrome-192x192.png",
+      "src": "/icons/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icons/android-chrome-512x512.png",
+      "src": "/icons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -30,13 +30,13 @@
       "purpose": "any"
     },
     {
-      "src": "/icons/favicon-32x32.png",
+      "src": "/icons/favicon-32x32.icon",
       "sizes": "32x32",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/favicon-16x16.png",
+      "src": "/icons/favicon-16x16.svg",
       "sizes": "16x16",
       "type": "image/png",
       "purpose": "any"
