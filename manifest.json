@@ -2,7 +2,7 @@
   "name": "Galeria de Mapas Privada",
   "short_name": "Galeria",
   "description": "Galeria de mapas protegida com acesso restrito",
-  "start_url": "/login.html",
+  "id": "/login.html",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
