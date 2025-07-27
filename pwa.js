@@ -99,91 +99,98 @@ class PWAManager {
     }
 
     createLoginInstallButton() {
-        const loginBox = document.querySelector('.login-box');
-        if (!loginBox || document.getElementById('custom-install-btn')) return;
+    const loginBox = document.querySelector('.login-box');
+    if (!loginBox || document.getElementById('custom-install-btn')) return;
 
-        const installBtn = document.createElement('button');
-        installBtn.id = 'custom-install-btn';
-        installBtn.innerHTML = `
-            <span class="install-icon">📱</span>
-            <span class="install-text">Instalar App</span>
-        `;
-        
-        installBtn.style.cssText = `
-            width: 100%;
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-            border: none;
-            border-radius: 12px;
-            padding: 12px 20px;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-        `;
+    const installBtn = document.createElement('button');
+    installBtn.id = 'custom-install-btn';
+    installBtn.innerHTML = `
+        <span class="install-icon">📱</span>
+        <span class="install-text">Instalar App</span>
+    `;
+    
+    installBtn.style.cssText = `
+        width: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 12px;
+        padding: 12px 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    `;
 
-        installBtn.addEventListener('click', () => this.handleInstallClick());
-        installBtn.addEventListener('mouseover', () => {
-            installBtn.style.transform = 'translateY(-2px)';
-            installBtn.style.boxShadow = '0 6px 20px rgba(76, 175, 80, 0.4)';
-        });
-        installBtn.addEventListener('mouseout', () => {
-            installBtn.style.transform = 'translateY(0)';
-            installBtn.style.boxShadow = '0 4px 15px rgba(76, 175, 80, 0.3)';
-        });
+    installBtn.addEventListener('click', () => this.handleInstallClick());
+    installBtn.addEventListener('mouseover', () => {
+        installBtn.style.transform = 'translateY(-2px)';
+        installBtn.style.background = 'linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%)';
+        installBtn.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
+    });
+    installBtn.addEventListener('mouseout', () => {
+        installBtn.style.transform = 'translateY(0)';
+        installBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        installBtn.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.3)';
+    });
 
-        loginBox.appendChild(installBtn);
-        this.installButton = installBtn;
-        this.updateInstallButton();
-    }
+    loginBox.appendChild(installBtn);
+    this.installButton = installBtn;
+    this.updateInstallButton();
+}
+
+    
 
     createGalleryInstallButton() {
-        const controlsOverlay = document.getElementById('controls-overlay');
-        if (!controlsOverlay || document.getElementById('custom-install-btn-gallery')) return;
+    const controlsOverlay = document.getElementById('controls-overlay');
+    if (!controlsOverlay || document.getElementById('custom-install-btn-gallery')) return;
 
-        const installBtn = document.createElement('button');
-        installBtn.id = 'custom-install-btn-gallery';
-        installBtn.innerHTML = '📱';
-        installBtn.title = 'Instalar como App';
-        
-        installBtn.style.cssText = `
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-            border: none;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            color: white;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            z-index: 3100;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
-        `;
+    const installBtn = document.createElement('button');
+    installBtn.id = 'custom-install-btn-gallery';
+    installBtn.innerHTML = '📱';
+    installBtn.title = 'Instalar como App';
+    
+    installBtn.style.cssText = `
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        z-index: 3100;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    `;
 
-        installBtn.addEventListener('click', () => this.handleInstallClick());
-        installBtn.addEventListener('mouseover', () => {
-            installBtn.style.transform = 'scale(1.1)';
-            installBtn.style.boxShadow = '0 6px 20px rgba(76, 175, 80, 0.6)';
-        });
-        installBtn.addEventListener('mouseout', () => {
-            installBtn.style.transform = 'scale(1)';
-            installBtn.style.boxShadow = '0 4px 15px rgba(76, 175, 80, 0.4)';
-        });
+    installBtn.addEventListener('click', () => this.handleInstallClick());
+    installBtn.addEventListener('mouseover', () => {
+        installBtn.style.transform = 'scale(1.1)';
+        installBtn.style.background = 'linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%)';
+        installBtn.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.6)';
+    });
+    installBtn.addEventListener('mouseout', () => {
+        installBtn.style.transform = 'scale(1)';
+        installBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        installBtn.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.4)';
+    });
 
-        controlsOverlay.appendChild(installBtn);
-        this.installButton = installBtn;
-        this.updateInstallButton();
-    }
+    controlsOverlay.appendChild(installBtn);
+    this.installButton = installBtn;
+    this.updateInstallButton();
+}
+
 
     updateInstallButton() {
         const loginBtn = document.getElementById('custom-install-btn');
