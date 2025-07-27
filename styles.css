@@ -109,7 +109,7 @@ body.show-cursor {
     padding: 10px 35px 10px 15px;
     border-radius: 18px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     display: flex;
     align-items: center;
@@ -130,7 +130,7 @@ body.show-cursor {
 
 .arrow {
     transition: transform 0.3s ease;
-    font-size: 12px;
+    font-size: 16px;
     margin-left: 10px;
     flex-shrink: 0;
 }
@@ -171,7 +171,7 @@ body.show-cursor {
     cursor: pointer;
     transition: all 0.3s ease;
     color: #333;
-    font-size: 13px;
+    font-size: 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     white-space: nowrap;
     overflow: hidden;
