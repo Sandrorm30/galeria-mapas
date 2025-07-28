@@ -159,7 +159,7 @@ class PWAManager {
     installBtn.style.cssText = `
         position: absolute;
         top: 15px;
-        left: 15px;
+        left: 12px;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border: none;
         border-radius: 50%;
@@ -167,7 +167,7 @@ class PWAManager {
         height: 40px;
         color: white;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         transition: all 0.3s ease;
         z-index: 3100;
