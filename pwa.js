@@ -167,7 +167,7 @@ class PWAManager {
         height: 45px;
         color: white;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         transition: all 0.3s ease;
         z-index: 3100;
