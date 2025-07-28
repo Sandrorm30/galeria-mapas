@@ -116,7 +116,7 @@ class PWAManager {
         border-radius: 12px;
         padding: 12px 20px;
         color: white;
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -163,11 +163,11 @@ class PWAManager {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border: none;
         border-radius: 50%;
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         color: white;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         transition: all 0.3s ease;
         z-index: 3100;
