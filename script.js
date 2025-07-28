@@ -39,14 +39,14 @@
                 position: absolute;
                 top: 15px;
                 right: 15px;
-                background: rgba(255, 0, 0, 0.7);
+                background: rgba(217, 215, 226, 0.7);
                 border: none;
                 border-radius: 50%;
                 width: 40px;
                 height: 40px;
                 color: white;
                 cursor: pointer;
-                font-size: 16px;
+                font-size: 20px;
                 transition: all 0.3s ease;
                 z-index: 3100;
             `;
@@ -64,7 +64,7 @@
             });
             
             logoutBtn.addEventListener('mouseout', () => {
-                logoutBtn.style.background = 'rgba(255, 0, 0, 0.7)';
+                logoutBtn.style.background = 'rgba(217, 215, 226, 0.7)';
                 logoutBtn.style.transform = 'scale(1)';
             });
             
