@@ -38,7 +38,7 @@
             logoutBtn.style.cssText = `
                 position: absolute;
                 top: 15px;
-                right: 15px;
+                right: 10px;
                 background: rgba(217, 215, 226, 0.7);
                 border: none;
                 border-radius: 50%;
