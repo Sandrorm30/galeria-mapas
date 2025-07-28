@@ -304,7 +304,7 @@ body.landscape .main-image {
         visibility: visible !important;
         pointer-events: auto !important;
         transition: none !important;
-        padding: 12px;
+        padding: 1px;
     }
 
     .desktop-controls {
