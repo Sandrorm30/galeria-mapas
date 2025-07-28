@@ -110,24 +110,22 @@ class PWAManager {
     `;
     
     installBtn.style.cssText = `
-        width: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border: none;
-        border-radius: 12px;
-        padding: 12px 20px;
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    `;
-
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 3100;
+           box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        `;
     installBtn.addEventListener('click', () => this.handleInstallClick());
     installBtn.addEventListener('mouseover', () => {
         installBtn.style.transform = 'translateY(-2px)';
