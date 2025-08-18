@@ -1,7 +1,7 @@
 {
-  "name": "Galeria de Mapas Privada",
+  "name": "Galeria de Mapas",
   "short_name": "Galeria",
-  "description": "Galeria de mapas protegida com acesso restrito",
+  "description": "Galeria de mapas",
   "id": "/login.html",
   "display": "standalone",
   "background_color": "#667eea",
