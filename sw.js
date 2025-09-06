@@ -1,4 +1,4 @@
-const CACHE_NAME = 'galeria-fotos-v1.0.0';
+const CACHE_NAME = 'mapas-ppa-v1.0.0';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -169,7 +169,7 @@ async function getOfflinePage() {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Offline - Galeria de Fotos</title>
+        <title>Offline - Mapas PPA</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -276,3 +276,4 @@ self.addEventListener('notificationclick', (event) => {
 });
 
 console.log('🚀 Service Worker carregado');
+
