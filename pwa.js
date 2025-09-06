@@ -278,7 +278,7 @@ Ou procure por "Instalar app" no menu!`;
 💻 DESKTOP:
 Chrome/Edge:
 1. Clique no ícone de instalação (⊕) na barra de endereços
-2. Ou Menu (⋮) → "Instalar Galeria de Fotos"
+2. Ou Menu (⋮) → "Instalar Mapas PPA"
 3. Clique "Instalar"
 
 Firefox:
@@ -419,3 +419,4 @@ const pwaManager = new PWAManager();
 window.pwaManager = pwaManager;
 
 console.log('📱 PWA Manager com botão personalizado carregado');
+
