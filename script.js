@@ -52,7 +52,7 @@
             `;
             
             logoutBtn.addEventListener('click', () => {
-                if (confirm('Deseja realmente sair da galeria?')) {
+                if (confirm('Deseja realmente sair dos mapas?')) {
                     localStorage.removeItem('gallery_auth_session');
                     window.location.href = 'login.html';
                 }
@@ -376,7 +376,7 @@ function selectPhoto(index) {
         forceHideControls();
     }
 
-    showLoading('Carregando imagem...');
+    showLoading('Carregando mapa...');
     mainImage.style.display = 'none';
     mainImage.classList.remove('loaded');
 
@@ -397,7 +397,7 @@ function selectPhoto(index) {
             mainImage.classList.add('loaded');
         }, 100);
         
-        console.log(`✅ Imagem carregada: ${photo.name}`);
+        console.log(`✅ Mapa carregada: ${photo.name}`);
     };
 
     newImage.onerror = () => {
@@ -567,7 +567,7 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('load', () => {
-    console.log('🚀 Iniciando galeria de fotos...');
+    console.log('🚀 Iniciando mapas PPA...');
     checkMobile();
     loadPhotosFromSheets();
     loadSavedOrientation();
@@ -602,7 +602,7 @@ function reloadData() {
             if (id.includes('dropdown-menu')) {
                 element.innerHTML = '';
             } else if (id.includes('selected-text')) {
-                element.textContent = 'Selecione uma foto';
+                element.textContent = 'Selecione um mapa';
             } else if (id === 'main-image') {
                 element.style.display = 'none';
             }
@@ -615,4 +615,5 @@ function reloadData() {
 window.reloadGallery = reloadData;
 
 console.log('📸 Galeria de Fotos - Script carregado');
+
 
