@@ -164,7 +164,7 @@ async function loadPhotosFromSheets() {
     const url = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&range=${RANGE}`;
     
     try {
-        showLoading('Carregando dados da planilha...');
+        showLoading('Carregando dados dos mapas...');
         const response = await fetch(url);
         
         if (!response.ok) {
@@ -193,24 +193,24 @@ async function loadPhotosFromSheets() {
         hideLoading();
         
         if (photos.length === 0) {
-            showError('Nenhuma foto encontrada na planilha.');
+            showError('Nenhum mapa encontrado.');
             if (!isMobile) showControls();
             return;
         }
 
         populateDropdown();
-        console.log(`✅ ${photos.length} fotos carregadas com sucesso`);
+        console.log(`✅ ${photos.length} mapas carregados com sucesso`);
         
     } catch (error) {
         hideLoading();
-        console.error('Erro ao carregar dados:', error);
+        console.error('Erro ao carregar mapas:', error);
         
         if (error.message.includes('404')) {
-            showError('Planilha não encontrada. Verifique o ID da planilha.');
+            showError('Arquivo não encontrado. Verifique o ID do arquivo.');
         } else if (error.message.includes('403')) {
-            showError('Acesso negado. Certifique-se de que a planilha está pública.');
+            showError('Acesso negado. Certifique-se de que o arquivo está público.');
         } else {
-            showError('Erro ao conectar com a planilha. Verifique sua conexão.');
+            showError('Erro ao conectar com o arquivo. Verifique sua conexão.');
         }
         
         if (!isMobile) showControls();
@@ -615,3 +615,4 @@ function reloadData() {
 window.reloadGallery = reloadData;
 
 console.log('📸 Galeria de Fotos - Script carregado');
+
